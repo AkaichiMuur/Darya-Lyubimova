@@ -63,6 +63,7 @@ if(isset($_GET['save']))
 
 <div class="header">
 	<h1><a href="main.php"> КНИГА РЕЦЕПТОВ </a></h1>
+	<a href="main.php" class="button"> Главная </a>
 </div>
 
 <form class="add" method="GET" id="form">

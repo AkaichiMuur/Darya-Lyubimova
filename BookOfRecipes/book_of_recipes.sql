@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 27 2020 г., 13:31
+-- Время создания: Апр 04 2020 г., 11:05
 -- Версия сервера: 5.6.41
 -- Версия PHP: 5.5.38
 
@@ -48,7 +48,8 @@ INSERT INTO `cooking` (`id_cooking`, `id_dish`, `id_stage`) VALUES
 (50, 3, 50),
 (51, 3, 51),
 (53, 18, 53),
-(54, 18, 54);
+(54, 18, 54),
+(55, 3, 55);
 
 -- --------------------------------------------------------
 
@@ -58,7 +59,7 @@ INSERT INTO `cooking` (`id_cooking`, `id_dish`, `id_stage`) VALUES
 
 CREATE TABLE `cooking_stages` (
   `id_stage` int(11) NOT NULL,
-  `img_cooking_stage` varchar(5000) NOT NULL,
+  `img_cooking_stage` varchar(250) NOT NULL,
   `description_stage` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -76,7 +77,8 @@ INSERT INTO `cooking_stages` (`id_stage`, `img_cooking_stage`, `description_stag
 (50, 'https://static.1000.menu/img/content/15692/tort-praga_1459664391_fe_6_min.jpg', 'Итак, во взбитые желтки с помощью ручного венчика или лопатки вмешайте белки. Делайте это аккуратно, чтобы белки максимально сохранили свой объем.'),
 (51, 'https://static.1000.menu/img/content/15692/tort-praga_1459664391_fe_7_min.jpg', 'Вот такая легкая и пышная масса должна получиться.'),
 (53, 'https://img1.russianfood.com/dycontent/images_upl/257/sm_256058.jpg', '\r\nВсе ингредиенты рассчитаны на 2 пиццы.\r\nТесто для пиццы приготовлено по рецепту Джейми Оливера (ссылка на рецепт - в списке продуктов).\r\nТоматный соус у меня домашний, со сладким перцем и чесноком.'),
-(54, 'https://img1.russianfood.com/dycontent/images_upl/257/sm_256007.jpg', 'Одну часть теста помещаем на лист, покрытый пергаментной бумагой, слегка смазанной маслом, и руками распределяем тесто по кругу диаметром 30 см.');
+(54, 'https://img1.russianfood.com/dycontent/images_upl/257/sm_256007.jpg', 'Одну часть теста помещаем на лист, покрытый пергаментной бумагой, слегка смазанной маслом, и руками распределяем тесто по кругу диаметром 30 см.'),
+(55, 'а', 'а');
 
 -- --------------------------------------------------------
 
@@ -88,7 +90,7 @@ CREATE TABLE `dishes` (
   `id_dish` int(11) NOT NULL,
   `title_dish` varchar(100) NOT NULL,
   `description_dish` text,
-  `img_dish` varchar(5000) NOT NULL,
+  `img_dish` varchar(250) NOT NULL,
   `cooking_time` varchar(30) NOT NULL,
   `training_level` varchar(30) NOT NULL,
   `cooking_difficulty` varchar(30) NOT NULL
@@ -136,13 +138,13 @@ ALTER TABLE `dishes`
 -- AUTO_INCREMENT для таблицы `cooking`
 --
 ALTER TABLE `cooking`
-  MODIFY `id_cooking` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id_cooking` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT для таблицы `cooking_stages`
 --
 ALTER TABLE `cooking_stages`
-  MODIFY `id_stage` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id_stage` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT для таблицы `dishes`

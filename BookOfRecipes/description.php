@@ -15,6 +15,7 @@ require_once "connection.php"; //подключение
 
 <div class="header">
 	<h1><a href="main.php"> КНИГА РЕЦЕПТОВ </a></h1>
+	<a href="main.php" class="button"> Назад </a>
 </div>
 
 <form class="add" method="GET">
